@@ -1,35 +1,10 @@
-const sum = (x,y) => x + y;
-const minus  = (x,y) => x - y;
-const multi  = (x,y) => x * y;
-const div  = (x,y) => x / y;
+let x = 10;
 
-
-let x = sum(5,10);
-let y = minus(40,30);
-let z = multi(8,5);
-let i = div(100,2);
-
-console.log(`x = ${x}`);
-console.log(`y = ${y}`);
-console.log(`z = ${z}`);
-console.log(`i = ${i}`);
-
-
-
-
-
-
-
-/*function sum(x,y) {
-    console.log("Show Sum");
-    console.log(x + y)
+function show() {
+    let x = 20;
+    return x;
 }
 
-*/
-
-/*const sum = (x,y) => {
-    console.log("Show Sum");
-    console.log(x + y);
-}
-
-*/
+console.log(x);
+console.log(show());
+console.log(x);
