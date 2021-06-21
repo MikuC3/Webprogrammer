@@ -1,31 +1,35 @@
-//let show = "RMUTL"
-//let name = "Worachit Toto"
-     
-//console.log(Javascript)
-//console.log(show)
-//console.log(name)
+const sum = (x,y) => x + y;
+const minus  = (x,y) => x - y;
+const multi  = (x,y) => x * y;
+const div  = (x,y) => x / y;
 
 
-//document.getElementById("show").innerHTML = show;
-        
-let name = "Worachot"
-let lastname;
-lastname = "Toto"
+let x = sum(5,10);
+let y = minus(40,30);
+let z = multi(8,5);
+let i = div(100,2);
 
-//console.log(`สวัสดีคุณ ${name} ${lastname}`);
+console.log(`x = ${x}`);
+console.log(`y = ${y}`);
+console.log(`z = ${z}`);
+console.log(`i = ${i}`);
 
-const PI = 3.14;
 
-let obj = {
-    name: "Worachit"
-    lastname: "Toto"
-    address: {
-        number: "18/6",
-        proovince: "พิษณุโลก"
-    }
+
+
+
+
+
+/*function sum(x,y) {
+    console.log("Show Sum");
+    console.log(x + y)
 }
 
-console.log(obj.name);
-console.log(obj.lastname);
-console.log(obj.address.number);
-console.log(obj.address.proovince);
+*/
+
+/*const sum = (x,y) => {
+    console.log("Show Sum");
+    console.log(x + y);
+}
+
+*/
