@@ -1,0 +1,23 @@
+{
+  "name": "webprogramming",
+  "version": "1.0.0",
+  "description": "วรชิต โต๊ะโต\r  มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา พิษณุโลก",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikuC3/Webprogrammer.git"
+  },
+  "keywords": [],
+  "author": "Worachit Toto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikuC3/Webprogrammer/issues"
+  },
+  "homepage": "https://github.com/MikuC3/Webprogrammer#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
