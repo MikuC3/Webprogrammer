@@ -10,7 +10,8 @@ const mongoose = require("mongoose");
 
 // mongo
 const usersRouter_mongo = require("./routes/mongo/users");
-
+const customersRouter_mongo = require("./routes/mongo/customers");
+const productsRouter_mongo = require("./routes/mongo/products");
 const app = express();
 
 mongoose.connect("mongodb+srv://admin:nest0956843881@cluster0.klszr.mongodb.net/rmutl?retryWrites=true&w=majority", {
@@ -30,6 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/users', usersRouter);
 
 // mongo
-app.use("/mongo", usersRouter_mongo);
+app.use("/mongo",usersRouter_mongo);
+app.use("/mongo",customersRouter_mongo);
+app.use("/mongo",productsRouter_mongo);
 
 module.exports = app;

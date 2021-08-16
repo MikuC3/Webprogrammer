@@ -1,0 +1,21 @@
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const schema = new Schema(
+    {
+        customerID: String,
+        customerFirstName: String,
+        customerLastName: String,
+        customerAddressNumber: String,
+        customerTel: String,
+        customerEmail: String,
+        customerUsername: String,
+        customerPassword: String
+    },
+    {
+        timestamps: true,
+        collection: "customers"
+    }
+);
+
+module.exports = mongoose.model("customers", schema);
