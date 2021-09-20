@@ -1,4 +1,3 @@
-นิว สเนลล์
 <template>
   <div class="container-fluid">
     <div class="row mt-3">
@@ -40,7 +39,7 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <div class="d-flex gap-3">
-          <button @click="Register" class="btn btn-success" type="button">
+          <button @click="register" class="btn btn-success" type="button">
             สมัครสมาชิก
           </button>
           <button @click="cancel" class="btn btn-danger" type="button">
@@ -64,12 +63,11 @@ export default {
       email: "",
       username: "",
       password: "",
-      regex:
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      regex: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     };
   },
   methods: {
-    Register() {
+    register() {
       if (this.email.trim() === "") {
         alert("กรุณากรอกอีเมล");
       } else if (this.username.trim() === "") {
@@ -77,20 +75,19 @@ export default {
       } else if (this.password.trim() === "") {
         alert("กรุณากรอกรหัสผ่าน");
       } else {
-        if (this.regex.test(this.email)) {
-          console.log(this.email.trim());
-          console.log(this.username.trim());
-          console.log(this.password.trim());
-
-          axios.post ("http://localhost:3000/mongo/users",{
-              email:this.email,
-          username: this.username,
-           password:this.password
-          }).then(function(res){
-              alert(res.data.messagr);
-          });
-        }else{
-            alert ("คุณกรอกอีเมลไม่ถูกต้อง");
+        if(this.regex.test(this.email)) {
+            console.log(this.email);
+            console.log(this.username);
+            console.log(this.password);
+            axios.post("http://localhost:3000/mongo/users", {
+                email: this.email,
+                username: this.username,
+                password: this.password
+            }).then(function(res){
+                alert(res.data.message);
+            });
+        } else {
+            alert("คุณกรอกอีเมลไม่ถูกต้อง");
         }
       }
     },
@@ -102,6 +99,7 @@ export default {
       this.username = "";
       this.password = "";
     },
+    
   },
 };
 </script>
